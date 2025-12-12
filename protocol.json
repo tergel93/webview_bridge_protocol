@@ -1,0 +1,44 @@
+{
+    "version": 2,
+    "meta":{
+        "types": [
+            "string", "uint", "int", "boolean", "double"
+        ]
+    },
+    "methods": [
+        {
+            "name": "init_bridge",
+            "params":[
+                {
+                    "name": "version",
+                    "type":"uint", 
+                    "desc": "front end protocol version"
+                }
+            ],
+            "returns": {
+                "type": "uint",
+                "desc": "client protocol version"
+            },
+            "desc": "initialize the bridge"
+        },
+        {
+            "name": "get_app_version_code",
+            "params": [],
+            "returns": "uint",
+            "desc":"obtain client app version code"
+        },
+        {
+            "name": "is_logged_in",
+            "params":[],
+            "returns": "boolean",
+            "desc": "check if the user is logged in"
+        },
+        {
+            "name": "get_access_token_or_empty",
+            "params":[],
+            "returns": "string",
+            "desc": "obtain user access token or empty string if not logged in",
+            "min_version": 2
+        }
+    ]
+}
